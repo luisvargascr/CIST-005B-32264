@@ -129,7 +129,7 @@ class Order{
 }
 
 BagInterface <|- LinkedBag
-Node -- LinkedBag
+Node --* LinkedBag
 
 Customer <|-- Student
 Customer <|-- Staff
@@ -140,17 +140,17 @@ Burger <|-- DonCali
 Burger <|-- Mushroom
 Burger <|-- Western
 
-Order -- Main
-Order -- Bacon
-Order -- DeAnza
-Order -- DonCali
-Order -- Mushroom
-Order -- Western
+Order *-- Main
+Order *-- Bacon
+Order *-- DeAnza
+Order *-- DonCali
+Order *-- Mushroom
+Order *-- Western
 
-OrderManager -- Order
-OrderManager -- Student
-OrderManager -- Staff
-OrderManager -- LinkedBag
-OrderManager -- Burger
+OrderManager *-- Order
+OrderManager *-- Student
+OrderManager *-- Staff
+OrderManager *-- LinkedBag
+OrderManager *-- Burger
 
 @enduml
