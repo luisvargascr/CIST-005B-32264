@@ -1,0 +1,14 @@
+================================================
+      Order Details:     
+================================================
+Quantity:  Description:    Price:              
+2          DeAnza Burger   $10.50 USD
+3          Bacon Burger    $17.25 USD
+4          Mushroom Burger $23.80 USD
+1          Western Burger  $5.95 USD
+1          DonCali Burger  $5.95 USD
+
+Your total before taxes = $63.45
+Your Tax Rate = 9.0%
+Your total after taxes = $69.16
+================================================

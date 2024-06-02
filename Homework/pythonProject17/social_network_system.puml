@@ -1,0 +1,131 @@
+@startuml
+
+'West Valley College
+'CIST-005B-32264
+'Student Name: Luis Vargas Chacon
+'Student ID: G08280596
+'Email: lvargasc@mywvm.wvm.edu
+'Team Name: The Infinite Loop
+'Date: 05/18/2024
+
+'Description: Social Network Diagram
+'This file is used to UML Class Diagram of the Social Network Diagram for Final Part 1
+
+'https://plantuml.com/class-diagram
+
+
+abstract class AbstractionCollection{
+    def __init__()
+    def __len__()
+    def __str__()
+    def __add__()
+    def __eq__()
+    def count()
+    def isEmpty()
+}
+
+class LinkedEdge{
+    def __init__()
+    def clearMark()
+    def __eq__()
+    def getOtherVertex()
+    def getToVertex()
+    def getWeight()
+    def isMarked()
+    def setMark()
+    def setWeight()
+    def __str__()
+}
+
+class LinkedVertex{
+    def __init__()
+    def clearMark()
+    def getProfile()
+    def isMarked()
+    def setLabel()
+    def setMark()
+    def __str__()
+    def __eq__()
+    def __hash__()
+    def addEdgeTo()
+    def getEdgeTo()
+    def incidentEdges()
+    def neighboringVertices()
+    def removeEdgeTo()
+}
+
+class LinkedDirectedGraph{
+    self.edgeCount
+    self.vertices
+    def clear()
+    def clearEdgeMarks()
+    def clearVertexMarks()
+    def sizeEdges()
+    def sizeVertices()
+    def __str__()
+    def add()
+    def addVertex()
+    def containsVertex()
+    def getVertex()
+    def getVertexByName()
+    def updateVertex()
+    def getIncidentEdges()
+    def removeVertex()
+    def addEdge()
+    def containsEdge()
+    def getEdge()
+    def removeEdge()
+    def removeEdgeByNames()
+    def __iter__()
+    def edges()
+    def getVertices()
+    def incidentEdges()
+    def neighboringVertices()
+}
+
+class MySocialNetwork{
+    def __init__()
+    def welcome_screen()
+    def show_main_options()
+    def run()
+    def request_option()
+    def __ask_option()
+    def is_option_valid()
+    def add_profile()
+    def search_for_profile()
+    def __is_network_empty()
+    def add_friends_to_profile()
+    def read_profile()
+    def update_profile()
+    def update_friends_list()
+    def delete_profile()
+    def delete_friend_of_profile()
+}
+
+class MyProfile{
+    self.__name
+    self.__email
+    self.__phone_number
+
+    def set_name()
+    def get_name()
+    def set_email()
+    def get_email()
+    def set_phone_number()
+    def get_phone_number()
+}
+
+class main{
+    self.social_network_name
+    self.network
+}
+
+AbstractionCollection <|- LinkedDirectedGraph
+LinkedDirectedGraph *-- MyProfile
+LinkedEdge --* LinkedVertex
+LinkedVertex --* LinkedDirectedGraph
+LinkedDirectedGraph --* MySocialNetwork
+MySocialNetwork --* main
+MySocialNetwork *-- MyProfile
+
+@enduml

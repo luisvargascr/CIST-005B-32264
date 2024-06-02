@@ -1,0 +1,10 @@
+================================================
+      Order Details:     
+================================================
+Quantity:  Description:    Price:              
+1          DeAnza Burger   $5.25 USD
+
+Your total before taxes = $5.25
+Your Tax Rate = 9.0%
+Your total after taxes = $5.72
+================================================

@@ -1,0 +1,156 @@
+@startuml
+
+'West Valley College
+'CIST-005B-32264
+'Student Name: Luis Vargas Chacon
+'Student ID: G08280596
+'Email: lvargasc@mywvm.wvm.edu
+'Team Name: The Infinite Loop
+'Date: 03/16/2024
+
+'Description: Order System Diagram
+'This file is used to UML Class Diagram of the DeAnza Order System
+
+'https://plantuml.com/class-diagram
+
+
+abstract class Customer{
+    def calculate_subtotal_with_sales_tax()
+    def get_tax_rate()
+}
+
+class Student{
+    def __init__()
+    def calculate_subtotal_with_sales_tax()
+    def get_tax_rate()
+}
+
+class Staff{
+    def __init__()
+    def calculate_subtotal_with_sales_tax()
+    def get_tax_rate()
+}
+
+class OrderManager{
+    self.total
+    self.items
+    self.order_details
+    def __init__()
+    def is_order_not_empty()
+    def add_to_order()
+    def calculate_partial_order()
+    def print_partial_order()
+    def print_full_order()
+    def __print_full_order_to_file()
+}
+
+interface BagInterface{
+    def __init__()
+    def __len__()
+    def __str__()
+    def __iter__()
+    def __add__()
+    def __eq__()
+    def count()
+    def clear()
+    def add()
+    def remove()
+}
+
+class LinkedBag{
+    self.items
+    self.size
+    def __init__()
+    def __len__()
+    def __str__()
+    def __iter__()
+    def __add__()
+    def __eq__()
+    def count()
+    def find()
+    def isEmpty()
+    def clear()
+    def add()
+    def remove()
+}
+
+class Bacon {
+   def __init__()
+}
+
+class Main{
+    order
+}
+
+class Burger{
+    self.name
+    self.price
+    self.description
+    def __init__()
+    def __str__()
+    def getName()
+    def getPrice()
+    def getDescription()
+}
+
+class DeAnza{
+    def __init__()
+}
+
+class DonCali{
+   def __init__()
+}
+
+class Mushroom{
+  def __init__()
+}
+
+class Western{
+  def __init__()
+}
+
+class Node{
+    self.value
+    self.next
+    def __init__()
+}
+
+class Order{
+    self.order_manager
+    self.menu_title
+    self.menu_items
+    def show_main_menu()
+    def take_and_process_customer_order
+    def ask_customer_type()
+    def ask_menu_item()
+    def is_menu_selection_invalid()
+    def ask_item_quantity()
+    def is_quantity_invalid()
+}
+
+BagInterface <|- LinkedBag
+Node -- LinkedBag
+
+Customer <|-- Student
+Customer <|-- Staff
+
+Burger <|-- Bacon
+Burger <|-- DeAnza
+Burger <|-- DonCali
+Burger <|-- Mushroom
+Burger <|-- Western
+
+Order -- Main
+Order -- Bacon
+Order -- DeAnza
+Order -- DonCali
+Order -- Mushroom
+Order -- Western
+
+OrderManager -- Order
+OrderManager -- Student
+OrderManager -- Staff
+OrderManager -- LinkedBag
+OrderManager -- Burger
+
+@enduml

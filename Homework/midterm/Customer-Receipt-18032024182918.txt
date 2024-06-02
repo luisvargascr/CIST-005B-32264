@@ -1,0 +1,10 @@
+================================================
+      Order Details:     
+================================================
+Quantity:  Description:    Price:              
+3          Bacon Burger    $17.25 USD
+
+Your total before taxes = $17.25
+Your Tax Rate = 9.0%
+Your total after taxes = $18.80
+================================================

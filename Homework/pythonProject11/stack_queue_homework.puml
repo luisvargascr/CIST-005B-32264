@@ -1,0 +1,104 @@
+@startuml
+
+'West Valley College
+'CIST-005B-32264
+'Student Name: Luis Vargas Chacon
+'Student ID: G08280596
+'Email: lvargasc@mywvm.wvm.edu
+'Team Name: The Infinite Loop
+'Date: 03/23/2024
+
+'Description: Stack and Queue Diagram
+'This file is used to UML Class Diagram of the Stack and Queue Homework
+
+'https://plantuml.com/class-diagram
+
+abstract class Stack
+{
+     __len__()
+     __str__()
+     __iter__()
+    __contains__()
+    __add__()
+    __eq__()
+    def isEmpty()
+    def clear()
+    def peek()
+    def push()
+    def pop()
+}
+
+class LinkedStack{
+    self.__head
+    self.__tail
+    self.__items
+    self.__size
+     __len__()
+     __str__()
+     __iter__()
+    __contains__()
+    __add__()
+    __eq__()
+    def isEmpty()
+    def clear()
+    def peek()
+    def push()
+    def pop()
+}
+
+abstract class AbstractQueue
+{
+     __len__()
+     __str__()
+     __iter__()
+    __contains__()
+    __add__()
+    __eq__()
+    def isEmpty()
+    def clear()
+    def peek()
+    def enqueue()
+    def dequeue()
+}
+
+class LinkedQueue{
+    self.__head
+    self.__items
+    self.__size
+     __len__()
+     __str__()
+     __iter__()
+    __contains__()
+    __add__()
+    __eq__()
+    def isEmpty()
+    def clear()
+    def peek()
+    def enqueue()
+    def dequeue()
+}
+
+class main_stack{
+    def interact_with_stack()
+}
+
+class main_queue{
+    def interact_with_queue()
+}
+
+class Node{
+    self.value
+    self.next
+}
+
+LinkedStack -- Node
+
+LinkedQueue -- Node
+
+Stack <|-- LinkedStack
+AbstractQueue <|-- LinkedQueue
+
+LinkedStack -- main_stack
+LinkedQueue -- main_queue
+
+@enduml
